@@ -1,4 +1,4 @@
-#CALCULATOR
+#NO-VOWELS
 
 ## Author
 Odero Oluoch
@@ -29,7 +29,7 @@ To access this project on your local files, you can clone it using these steps
 
 
 ### Live Site
-View [Live](https://oderooluoch.github.io/calculator/)
+View [Live](https://oderooluoch.github.io/no-vowels-assingment/)
 
 ### Licence
 This project is under the  [MIT](LICENSE) licence.
