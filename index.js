@@ -4,18 +4,18 @@ $(document).ready(function() {
 
     //hide display div
     $("div.alert").hide();
-
-
     $(".play-form").submit(function(event) {
         
         // Getting the User Input
         let selectString = $("#selectString").val();  // Get from Input
         
-
         // Displaying the Values
         let results = replaceVowels(selectString)
         $("#results").text(results);
-      
+
+        //reset the form
+        $(this)[0].reset();
+    
         //Display hidden div
         $("div.alert").show();
 
@@ -24,12 +24,14 @@ $(document).ready(function() {
 
 })
 
-
+//function that does the work.
 function replaceVowels(str) {
     let newString = '';
     let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']; //Vowels array.
     for (let i = 0; i < vowels.length; i++) {
-        newString = str.split(vowels[i]).join("-"); //Trick to use instead of replace(), since replace() uses regex.
+        newString = str.split(vowels[i]).join("-");
+        console.log(newString)
+        //Trick to use instead of replace(), since replace() uses regex.
         str = newString; //Pass the new string as the string to be operated on by split() and join().
     }
     return newString;
